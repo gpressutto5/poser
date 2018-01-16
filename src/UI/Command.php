@@ -4,6 +4,7 @@ namespace PUGX\Poser\UI;
 
 use PUGX\Poser\Render\SvgFlatRender;
 use PUGX\Poser\Render\SvgFlatSquareRender;
+use PUGX\Poser\Render\SvgForTheBadgeRender;
 use Symfony\Component\Console\Command\Command as BaseCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -37,7 +38,8 @@ class Command extends BaseCommand
         $this->poser = new Poser(array(
             new SvgRender(),
             new SvgFlatRender(),
-            new SvgFlatSquareRender()
+            new SvgFlatSquareRender(),
+            new SvgForTheBadgeRender(),
         ));
         $this->format = 'flat';
         $this->header = self::HEADER;
